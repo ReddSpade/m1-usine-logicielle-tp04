@@ -13,6 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Detection de secrets (GitLeaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Installer Python
         uses: actions/setup-python@v6
         with:
