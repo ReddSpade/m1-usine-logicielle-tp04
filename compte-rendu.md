@@ -33,6 +33,12 @@ dans son code des packages qui seraient compromis, ou de faire tourner du code c
 
 #### Quel est l'avantage de Dependabot par rapport à un scan manuel avec pip-audit ? Pourquoi configure-t-on aussi l'écosystème github-actions ? <!-- rumdl-disable-line MD013 -->
 
+Si pip-audit est un linter, Dependabot est un formatter, il permet de corriger
+via des PR des potentielles version trop anciennes.
+
+La configuration de Dependatbot github-actions permet d'instaurer des récurrence
+sur l'exécution des pipelines.
+
 ## Partie 3 — Gestion des secrets avec GitHub Secrets
 
 ### Question 4
