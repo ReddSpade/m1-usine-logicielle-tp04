@@ -4,5 +4,5 @@ pytest-cov
 black
 ruff
 bandit
-semgrep
+semgrep==1.158.0
 pip-audit
